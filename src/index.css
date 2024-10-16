@@ -37,6 +37,7 @@ body {
   max-height: 100%;
   max-width: 80%;
   gap: 20px;
+  width: 100%;
 }
 
 .tabs {
@@ -68,32 +69,33 @@ body {
   width: 80%;
 }
 
-.content {
+.content-wrap {
   flex: 1;
   background-color: #f2f0f0;
   padding: 20px;
 }
 
-.content .text {
+.content-wrap .content {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100%;
+  position: relative;
 }
 
-.content h2 {
+.content-wrap h2 {
   margin-bottom: 10px;
 }
 
-.content p {
+.content-wrap p {
   padding: 20px 0;
 }
 
-.content ul li {
+.content-wrap ul li {
   padding-left: 10px;
   list-style-position: inside;
 }
 
-.content ol li {
+.content-wrap ol li {
   margin-left: 10px;
   list-style-position: inside;
 }
@@ -140,6 +142,32 @@ body {
   font-size: 12px;
 }
 
+.do {
+  color: #fff;
+  background: #0078ee;
+  padding: 15px 0;
+  width: 100%;
+  font-size: 18px;
+  border: 0;
+  border-radius: 10px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  transition: .1s;
+  cursor: pointer;
+}
+
+.inputs {
+  height: calc(100% - 102px);
+}
+
+.do:hover {
+  background: #5296da;
+}
+.do:active {
+  background: #0158af;
+}
+
 @media screen and (max-width: 1340px) {
   .tab {
     font-size: 14px;
@@ -171,7 +199,7 @@ body {
     height: 100%;
   }
 
-  .content {
+  .content-wrap {
     font-size: 14px;
   }
 }
